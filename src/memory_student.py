@@ -4,6 +4,7 @@ from typing import Any
 
 from .config import settings
 from .context_budget import ContextBudgetManager
+from .utils import cap_query
 from .zep_common import prime_eval_thread, render_graph_search
 
 
@@ -26,7 +27,8 @@ class StudentMemory:
         # Bonus: append graph.search(scope="edges", limit>=20) facts with
         #        validity ranges (a low limit can miss deadline/open-loop facts).
         prime_eval_thread(self.client, user_id, thread_id, query)
-        raise NotImplementedError("LAB TODO: implement long-term retrieval with Zep Context Block")
+        context = self.client.thread.get_user_context(thread_id=thread_id)
+        return str(context.context)
 
     def retrieve_episodic(self, user_id: str, query: str) -> str:
         # LAB TODO 2/4
