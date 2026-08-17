@@ -5,32 +5,32 @@
 - Cases: **20**
 - Passed: **20/20**
 - Evidence hit rate: **100.0%**
-- Average retrieval latency: **1305.9 ms**
-- Average token reduction vs full source context: **6.3%**
+- Average retrieval latency: **1859.9 ms**
+- Average token reduction vs full source context: **8.7%**
 - Golden bonus: **10/10** (100% required)
 
 | Case | Layer | Pass | Latency ms | Retrieved tokens | Token reduction | Missing / Error |
 | --- | --- | --- | ---: | ---: | ---: | --- |
-| G01 | short_term | PASS | 0.3 | 227 | 0.0% |  |
+| G01 | short_term | PASS | 0.4 | 227 | 0.0% |  |
 | G02 | short_term | PASS | 0.1 | 133 | 0.0% |  |
-| G08 | long_term | PASS | 2239.5 | 675 | 0.0% |  |
-| G09 | long_term | PASS | 1571.6 | 884 | 0.0% |  |
-| G12 | semantic | PASS | 397.2 | 418 | 8.9% |  |
-| G14 | semantic | PASS | 334.5 | 270 | 30.2% |  |
-| G15 | semantic | PASS | 275.0 | 270 | 41.2% |  |
-| G19 | mixed | PASS | 1769.5 | 581 | 0.0% |  |
-| G03 | long_term | PASS | 1793.6 | 885 | 0.0% |  |
-| G04 | long_term | PASS | 1409.5 | 865 | 0.0% |  |
-| G05 | long_term | PASS | 1705.7 | 889 | 0.0% |  |
-| G10 | episodic | PASS | 356.9 | 582 | 0.0% |  |
-| G11 | episodic | PASS | 338.2 | 588 | 0.0% |  |
-| G13 | semantic | PASS | 390.7 | 416 | 26.4% |  |
-| G16 | mixed | PASS | 2013.3 | 581 | 0.0% |  |
-| G18 | mixed | PASS | 1810.0 | 500 | 11.5% |  |
-| G20 | mixed | PASS | 4575.4 | 831 | 0.0% |  |
-| G06 | long_term | PASS | 1900.0 | 872 | 0.0% |  |
-| G07 | long_term | PASS | 1584.2 | 878 | 0.0% |  |
-| G17 | mixed | PASS | 1652.6 | 581 | 8.1% |  |
+| G08 | long_term | PASS | 5415.4 | 636 | 0.0% |  |
+| G09 | long_term | PASS | 5819.7 | 886 | 0.0% |  |
+| G12 | semantic | PASS | 338.4 | 365 | 20.5% |  |
+| G14 | semantic | PASS | 672.5 | 217 | 43.9% |  |
+| G15 | semantic | PASS | 336.6 | 217 | 52.7% |  |
+| G19 | mixed | PASS | 1834.7 | 581 | 0.0% |  |
+| G03 | long_term | PASS | 1519.2 | 884 | 0.0% |  |
+| G04 | long_term | PASS | 3404.2 | 889 | 0.0% |  |
+| G05 | long_term | PASS | 3524.2 | 889 | 0.0% |  |
+| G10 | episodic | PASS | 426.8 | 471 | 0.0% |  |
+| G11 | episodic | PASS | 2569.5 | 474 | 0.0% |  |
+| G13 | semantic | PASS | 339.8 | 363 | 35.8% |  |
+| G16 | mixed | PASS | 1848.1 | 581 | 0.0% |  |
+| G18 | mixed | PASS | 1041.1 | 489 | 13.5% |  |
+| G20 | mixed | PASS | 2195.3 | 831 | 0.0% |  |
+| G06 | long_term | PASS | 1441.5 | 889 | 0.0% |  |
+| G07 | long_term | PASS | 1351.1 | 887 | 0.0% |  |
+| G17 | mixed | PASS | 3118.9 | 581 | 8.1% |  |
 
 ## Evidence excerpts
 
@@ -44,7 +44,7 @@
 
 ### G08 - long_term
 
-`<USER_SUMMARY> Lan's project is LOTUS-88. They prioritize Java and Spring Boot for backend development and do not use Python for backend.  Lan prioritizes Java and Spring Boot for backend development. </USER_SUMMARY>  <EPISODES> Episodes are source message or document excerpts shown in selection order.   - Created At: 2026-08-17 05:26:08     Source: message     Content: [user] {   "user_id": "lan-lab17",   "first_name": "Lan",   "last_name": "Tran",   "user_alias": "Evaluation User" }: Minh la Lan, minh dang muon them retry cho phan goi payment trong san pham cua minh va minh muon vi du code hop voi dung stack ma minh dang dung chu dung dua cho minh vi du cua ngon ngu khac. Ban gy y gium min`
+`<USER_SUMMARY> Lan's project is LOTUS-88. They prioritize Java and Spring Boot for backend development and do not use Python for backend.  Lan prioritizes Java and Spring Boot for backend development. </USER_SUMMARY>  <EPISODES> Episodes are source message or document excerpts shown in selection order.   - Created At: 2026-08-01 11:00:00     Source: message     Content: [user] {   "user_id": "lan-lab17",   "first_name": "Lan",   "last_name": "Tran",   "user_alias": "Lan Tran" }: Toi la Lan. Du an cua toi la LOTUS-88. Toi uu tien Java va Spring Boot, va khong dung Python trong vi du backend.   - Created At: 2026-08-01 11:00:20     Source: message     Content: Lab Assistant (assistant): Da hie`
 
 ### G09 - long_term
 
@@ -64,7 +64,7 @@
 
 ### G19 - mixed
 
-`<LONG_TERM> <USER_SUMMARY> Lan's project is LOTUS-88. They prioritize Java and Spring Boot for backend development and do not use Python for backend.  Lan prioritizes Java and Spring Boot for backend development. </USER_SUMMARY>  <EPISODES> Episodes are source message or document excerpts shown in selection order.   - Created At: 2026-08-01 11:00:00     Source: message     Content: [user] {   "user_id": "lan-lab17",   "first_name": "Lan",   "last_name": "Tran",   "user_alias": "Lan Tran" }: Toi la Lan. Du an cua toi la LOTUS-88. Toi uu tien Java va Spring Boot, va khong dung Python trong vi du backend.   - Created At: 2026-08-01 11:00:20     Source: message     Content: Lab Assistant (assist`
+`<LONG_TERM> <USER_SUMMARY> Lan's project is LOTUS-88. They prioritize Java and Spring Boot for backend development and do not use Python for backend.  Lan prioritizes Java and Spring Boot for backend development. </USER_SUMMARY>  <EPISODES> Episodes are source message or document excerpts shown in selection order.   - Created At: 2026-08-17 05:41:17     Source: message     Content: [user] {   "user_id": "lan-lab17",   "first_name": "Lan",   "last_name": "Tran",   "user_alias": "Evaluation User" }: Lan uu tien stack backend nao cho LOTUS-88?   - Created At: 2026-08-01 11:00:20     Source: message     Content: Lab Assistant (assistant): Da hieu: LOTUS-88, Java + Spring Boot cho backend example`
 
 ### G03 - long_term
 
@@ -80,11 +80,11 @@
 
 ### G10 - episodic
 
-`EPISODE: Ten du an ca nhan cua toi la ORCHID-27. Toi thich Python va khong thich Java. Khi giai thich code, hay dung vi du ngan. EPISODE: Toi dang hoc async/await va hay nham coroutine voi Task. Neu sau nay gap chu de nay, hay giai thich bang timeline. EPISODE: Toi se uu tien timeline khi giai thich coroutine va Task. EPISODE: TODO: hoan thanh benchmark report truoc thu Sau luc 16:00. Day la open loop LAB-REPORT-1600. EPISODE: Hom nay toi debug async HTTP. Toi da thu tang timeout len 60s nhung van fail. EPISODE: Cach hieu qua la reuse aiohttp ClientSession va dat concurrency=20. Reflection: loi chinh la connection churn, khong phai timeout threshold. Ma su co ASYNC-FIX-20. EPISODE: Da ghi nh`
+`EPISODE: Ten du an ca nhan cua toi la ORCHID-27. Toi thich Python va khong thich Java. Khi giai thich code, hay dung vi du ngan. EPISODE: Toi dang hoc async/await va hay nham coroutine voi Task. Neu sau nay gap chu de nay, hay giai thich bang timeline. EPISODE: Toi se uu tien timeline khi giai thich coroutine va Task. EPISODE: TODO: hoan thanh benchmark report truoc thu Sau luc 16:00. Day la open loop LAB-REPORT-1600. EPISODE: Hom nay toi debug async HTTP. Toi da thu tang timeout len 60s nhung van fail. EPISODE: Hay kiem tra connection pool, lifecycle cua client va concurrency. EPISODE: Cach hieu qua la reuse aiohttp ClientSession va dat concurrency=20. Reflection: loi chinh la connection ch`
 
 ### G11 - episodic
 
-`EPISODE: Ten du an ca nhan cua toi la ORCHID-27. Toi thich Python va khong thich Java. Khi giai thich code, hay dung vi du ngan. EPISODE: Toi dang hoc async/await va hay nham coroutine voi Task. Neu sau nay gap chu de nay, hay giai thich bang timeline. EPISODE: TODO: hoan thanh benchmark report truoc thu Sau luc 16:00. Day la open loop LAB-REPORT-1600. EPISODE: Hom nay toi debug async HTTP. Toi da thu tang timeout len 60s nhung van fail. EPISODE: Cach hieu qua la reuse aiohttp ClientSession va dat concurrency=20. Reflection: loi chinh la connection churn, khong phai timeout threshold. Ma su co ASYNC-FIX-20. EPISODE: Da ghi nhan trajectory: increase timeout khong hieu qua; ClientSession + con`
+`EPISODE: Ten du an ca nhan cua toi la ORCHID-27. Toi thich Python va khong thich Java. Khi giai thich code, hay dung vi du ngan. EPISODE: Da hieu: demo ca nhan ORCHID-27, uu tien Python, tranh Java, vi du ngan. EPISODE: Toi dang hoc async/await va hay nham coroutine voi Task. Neu sau nay gap chu de nay, hay giai thich bang timeline. EPISODE: TODO: hoan thanh benchmark report truoc thu Sau luc 16:00. Day la open loop LAB-REPORT-1600. EPISODE: Hom nay toi debug async HTTP. Toi da thu tang timeout len 60s nhung van fail. EPISODE: Hay kiem tra connection pool, lifecycle cua client va concurrency. EPISODE: Cach hieu qua la reuse aiohttp ClientSession va dat concurrency=20. Reflection: loi chinh l`
 
 ### G13 - semantic
 
