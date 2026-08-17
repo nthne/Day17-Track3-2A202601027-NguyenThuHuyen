@@ -139,7 +139,9 @@ def retrieve_for_case(
         short_term.add(message["role"], message["content"])
     layers["short_term"] = short_term.render()
 
-    wanted = case.get("retrieve_layers") or [case["expected_layer"]]
+    wanted = case.get("retrieve_layers")
+    if not wanted:
+        wanted = ["long_term", "semantic"] if case["expected_layer"] == "mixed" else [case["expected_layer"]]
     query = case["query"]
     if "long_term" in wanted:
         layers["long_term"] = memory.retrieve_long_term(
