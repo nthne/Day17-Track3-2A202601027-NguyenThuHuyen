@@ -8,7 +8,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /workspace
 
 COPY requirements.txt /tmp/requirements.txt
-RUN pip install --upgrade pip && pip install -r /tmp/requirements.txt
+RUN python -m pip install --upgrade pip \
+    && python -m pip install --no-cache-dir --prefer-binary --retries 8 --timeout 120 -r /tmp/requirements.txt
 
 COPY . /workspace
 

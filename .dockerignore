@@ -1,5 +1,9 @@
 .env
 .git
+.venv/
+.venv*/
+.codex_docker_config/
+.codex_tmp*
 .pytest_cache
 __pycache__
 *.pyc

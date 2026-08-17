@@ -18,3 +18,4 @@ typer>=0.15,<1
 pytest>=8.3,<9
 requests>=2.32,<3
 streamlit>=1.48,<2
+Jinja2>=3.1,<4
