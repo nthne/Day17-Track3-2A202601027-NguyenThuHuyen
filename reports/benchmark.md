@@ -5,22 +5,22 @@
 - Cases: **11**
 - Passed: **11/11**
 - Evidence hit rate: **100.0%**
-- Average retrieval latency: **886.7 ms**
+- Average retrieval latency: **761.9 ms**
 - Average token reduction vs full source context: **14.2%**
 
 | Case | Layer | Pass | Latency ms | Retrieved tokens | Token reduction | Missing / Error |
 | --- | --- | --- | ---: | ---: | ---: | --- |
 | E01 | short_term | PASS | 0.1 | 133 | 0.0% |  |
-| E06 | semantic | PASS | 1300.4 | 148 | 67.8% |  |
-| E09 | long_term | PASS | 1487.3 | 636 | 0.0% |  |
-| E10 | short_term | PASS | 0.5 | 195 | 0.0% |  |
-| E02 | long_term | PASS | 1222.5 | 888 | 0.0% |  |
-| E03 | long_term | PASS | 1491.1 | 887 | 0.0% |  |
-| E04 | episodic | PASS | 328.1 | 248 | 0.0% |  |
-| E05 | episodic | PASS | 342.5 | 267 | 0.0% |  |
-| E07 | mixed | PASS | 2046.5 | 485 | 14.2% |  |
-| E11 | semantic | PASS | 255.6 | 146 | 74.2% |  |
-| E08 | long_term | PASS | 1279.6 | 887 | 0.0% |  |
+| E06 | semantic | PASS | 950.4 | 148 | 67.8% |  |
+| E09 | long_term | PASS | 1224.7 | 604 | 0.0% |  |
+| E10 | short_term | PASS | 0.6 | 195 | 0.0% |  |
+| E02 | long_term | PASS | 1206.3 | 887 | 0.0% |  |
+| E03 | long_term | PASS | 1330.0 | 889 | 0.0% |  |
+| E04 | episodic | PASS | 318.1 | 603 | 0.0% |  |
+| E05 | episodic | PASS | 282.4 | 596 | 0.0% |  |
+| E07 | mixed | PASS | 1512.4 | 485 | 14.2% |  |
+| E11 | semantic | PASS | 315.0 | 146 | 74.2% |  |
+| E08 | long_term | PASS | 1240.7 | 887 | 0.0% |  |
 
 ## Evidence excerpts
 
@@ -50,11 +50,11 @@
 
 ### E04 - episodic
 
-`EPISODE: Ten du an ca nhan cua toi la ORCHID-27. Toi thich Python va khong thich Java. Khi giai thich code, hay dung vi du ngan. EPISODE: Toi dang hoc async/await va hay nham coroutine voi Task. Neu sau nay gap chu de nay, hay giai thich bang timeline. EPISODE: TODO: hoan thanh benchmark report truoc thu Sau luc 16:00. Day la open loop LAB-REPORT-1600. EPISODE: Hom nay toi debug async HTTP. Toi da thu tang timeout len 60s nhung van fail. EPISODE: Cach hieu qua la reuse aiohttp ClientSession va dat concurrency=20. Reflection: loi chinh la connection churn, khong phai timeout threshold. Ma su co ASYNC-FIX-20. EPISODE: Da ghi nhan trajectory: increase timeout khong hieu qua; ClientSession + con`
+`EPISODE: Toi dang hoc async/await va hay nham coroutine voi Task. Neu sau nay gap chu de nay, hay giai thich bang timeline. EPISODE: TODO: hoan thanh benchmark report truoc thu Sau luc 16:00. Day la open loop LAB-REPORT-1600. EPISODE: Hom nay toi debug async HTTP. Toi da thu tang timeout len 60s nhung van fail. EPISODE: Cach hieu qua la reuse aiohttp ClientSession va dat concurrency=20. Reflection: loi chinh la connection churn, khong phai timeout threshold. Ma su co ASYNC-FIX-20. EPISODE: Da ghi nhan trajectory: increase timeout khong hieu qua; ClientSession + concurrency=20 giai quyet connection churn. EPISODE: Hay chon huong dan code retry payment phu hop voi preference ca nhan cua Minh. `
 
 ### E05 - episodic
 
-`EPISODE: Ten du an ca nhan cua toi la ORCHID-27. Toi thich Python va khong thich Java. Khi giai thich code, hay dung vi du ngan. EPISODE: Toi dang hoc async/await va hay nham coroutine voi Task. Neu sau nay gap chu de nay, hay giai thich bang timeline. EPISODE: TODO: hoan thanh benchmark report truoc thu Sau luc 16:00. Day la open loop LAB-REPORT-1600. EPISODE: Hom nay toi debug async HTTP. Toi da thu tang timeout len 60s nhung van fail. EPISODE: Hay kiem tra connection pool, lifecycle cua client va concurrency. EPISODE: Cach hieu qua la reuse aiohttp ClientSession va dat concurrency=20. Reflection: loi chinh la connection churn, khong phai timeout threshold. Ma su co ASYNC-FIX-20. EPISODE: `
+`EPISODE: Backend cua BLUEBIRD-42 bat buoc dung stack gi? EPISODE: Ten du an ca nhan cua toi la ORCHID-27. Toi thich Python va khong thich Java. Khi giai thich code, hay dung vi du ngan. EPISODE: TODO: hoan thanh benchmark report truoc thu Sau luc 16:00. Day la open loop LAB-REPORT-1600. EPISODE: Hom nay toi debug async HTTP. Toi da thu tang timeout len 60s nhung van fail. EPISODE: Cach hieu qua la reuse aiohttp ClientSession va dat concurrency=20. Reflection: loi chinh la connection churn, khong phai timeout threshold. Ma su co ASYNC-FIX-20. EPISODE: Da ghi nhan trajectory: increase timeout khong hieu qua; ClientSession + concurrency=20 giai quyet connection churn. EPISODE: Minh dang lam kie`
 
 ### E07 - mixed
 
