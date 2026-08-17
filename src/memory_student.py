@@ -63,4 +63,4 @@ class StudentMemory:
     def assemble_context(self, layers: dict[str, str]) -> tuple[str, dict[str, dict[str, int]]]:
         # LAB TODO 4/4
         # Use ContextBudgetManager to enforce 10/4/3/3 budget and priority order.
-        raise NotImplementedError("LAB TODO: assemble/trim memory context")
+        return self.budget.assemble(layers)
