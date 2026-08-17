@@ -37,7 +37,13 @@ class StudentMemory:
         # Tip: verbose session episodes can crowd out concise, marker-bearing
         # reflections under the tight episodic budget — render_graph_search
         # accepts an `episode_char_cap` to keep more distinct episodes.
-        raise NotImplementedError("LAB TODO: implement episodic search")
+        results = self.client.graph.search(
+            user_id=user_id,
+            query=cap_query(query),
+            scope="episodes",
+            limit=5,
+        )
+        return render_graph_search(results, episode_char_cap=1200)
 
     def retrieve_semantic(self, graph_id: str, query: str) -> str:
         # LAB TODO 3/4
