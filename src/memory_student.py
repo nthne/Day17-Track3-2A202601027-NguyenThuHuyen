@@ -52,7 +52,13 @@ class StudentMemory:
         # literal markers (e.g. PAYMENT-RULE-3). The "auto" scope returns
         # extracted facts that DROP those literal codes, so avoid it here.
         # Fallback: scope="nodes".
-        raise NotImplementedError("LAB TODO: implement semantic graph search")
+        results = self.client.graph.search(
+            graph_id=graph_id,
+            query=cap_query(query),
+            scope="episodes",
+            limit=8,
+        )
+        return render_graph_search(results)
 
     def assemble_context(self, layers: dict[str, str]) -> tuple[str, dict[str, dict[str, int]]]:
         # LAB TODO 4/4
